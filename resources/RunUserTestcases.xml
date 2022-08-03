@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Nop Comerce">
+
+	<test name="Run on FIREFOX UI">
+		<parameter name="browser" value="firefox_ui" />
+		<parameter name="url" value="https://demo.nopcommerce.com/" />
+		<classes>
+			<class name="com.nopcomerce.users.TC_01_Register" />
+		</classes>
+	</test>
+</suite> 
