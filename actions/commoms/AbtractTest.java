@@ -16,8 +16,22 @@ public class AbtractTest {
 	private String projectFolder = System.getProperty("user.dir");
 	private WebDriver driver;
 	private String osName = System.getProperty("os.name");
-
+	protected String firstName, lastName, day, month, year, email, companyName, password,passwordLow, passwordError,confirmPassword,emailNotRegister,emailError;
 	protected WebDriver getBrowserDriver(String browserName,String urlValues) {
+		firstName = "Phan";
+		lastName = "Thuy";
+		day = "28";
+		month = "November";
+		year = "1998";
+		companyName = "Senda";
+		password = "28111998";
+		passwordLow = "2811";
+		confirmPassword="281198";
+		email = "Phanthuy" + "123456" + "@gmail.com";
+		password = "123456";
+		emailError = "Phanthuy.123";
+		passwordError = "123457";
+		emailNotRegister ="Phanthuy111@gmail.com";
 		Browser browser = Browser.valueOf(browserName.toUpperCase());
 		if (browser == Browser.FIREFOX_UI) {
 			WebDriverManager.firefoxdriver().setup();

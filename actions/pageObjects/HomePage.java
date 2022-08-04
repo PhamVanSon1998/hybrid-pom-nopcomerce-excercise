@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commoms.AbtractPage;
 import pageUIs.HomePageUI;
+import pageUIs.LoginPageUI;
 
 public class HomePage extends AbtractPage {
 	WebDriver driver;
@@ -16,5 +17,11 @@ public class HomePage extends AbtractPage {
 		waitToElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
 		return pageObjects.PageGeneratorManage.getRegisterPageOject(driver);
+	}
+
+	public LoginPage clickLoginLink() {
+		waitToElementClickable(driver, HomePageUI.LOGIN_LINK);
+		clickToElement(driver, HomePageUI.LOGIN_LINK);
+		return PageGeneratorManage.getLoginPageOject(driver);
 	}
 }

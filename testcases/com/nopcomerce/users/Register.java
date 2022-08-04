@@ -13,27 +13,14 @@ import java_cup.runtime.virtual_parse_stack;
 import pageObjects.HomePage;
 import pageObjects.RegisterPage;
 
-public class TC_01_Register extends AbtractTest {
+public class Register extends AbtractTest {
 
 	WebDriver driver;
 	HomePage homePageOject;
 	RegisterPage registerPageOject;
-	String firstName, lastName, day, month, year, emailName, companyName, password, emailNameError, passwordError,confirmPassword;
-
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void BeforeClass(String browserName, String urlValues) {
-		firstName = "Phan";
-		lastName = "Thuy";
-		day = "28";
-		month = "November";
-		year = "1998";
-		emailName = "Phanthuy" + getRandomNumber() + "@gmail.com";
-		companyName = "Senda";
-		password = "28111998";
-		emailNameError = "phanthuy.2811";
-		passwordError = "2811";
-		confirmPassword="281198";
 		driver = getBrowserDriver(browserName, urlValues);
 	}
 
@@ -62,7 +49,7 @@ public class TC_01_Register extends AbtractTest {
 		registerPageOject.selectDayDropdown(day);
 		registerPageOject.selectMonthDropdown(month);
 		registerPageOject.selectYearDropdown(year);
-		registerPageOject.inputToEmailTextbox(emailNameError);
+		registerPageOject.inputToEmailTextbox(emailError);
 		registerPageOject.inputToCompanyNameTextbox(companyName);
 		registerPageOject.inputToPasswordTextbox(password);
 		registerPageOject.inputToConfirmPasswordTextbox(password);
@@ -78,7 +65,7 @@ public class TC_01_Register extends AbtractTest {
 		registerPageOject.selectDayDropdown(day);
 		registerPageOject.selectMonthDropdown(month);
 		registerPageOject.selectYearDropdown(year);
-		registerPageOject.inputToEmailTextbox(emailName);
+		registerPageOject.inputToEmailTextbox(email);
 		registerPageOject.inputToCompanyNameTextbox(companyName);
 		registerPageOject.inputToPasswordTextbox(password);
 		registerPageOject.inputToConfirmPasswordTextbox(password);
@@ -96,7 +83,7 @@ public class TC_01_Register extends AbtractTest {
 		registerPageOject.selectDayDropdown(day);
 		registerPageOject.selectMonthDropdown(month);
 		registerPageOject.selectYearDropdown(year);
-		registerPageOject.inputToEmailTextbox(emailName);
+		registerPageOject.inputToEmailTextbox(email);
 		registerPageOject.inputToCompanyNameTextbox(companyName);
 		registerPageOject.inputToPasswordTextbox(password);
 		registerPageOject.inputToConfirmPasswordTextbox(password);
@@ -106,8 +93,8 @@ public class TC_01_Register extends AbtractTest {
 	
 	@Test
 	public void TC_05_Register_With_Password_Less_06_Character() {
-		registerPageOject.inputToPasswordTextbox(passwordError);
-		registerPageOject.inputToConfirmPasswordTextbox(passwordError);
+		registerPageOject.inputToPasswordTextbox(passwordLow);
+		registerPageOject.inputToConfirmPasswordTextbox(passwordLow);
 		registerPageOject.clickToRegisterButton();
 		Assert.assertTrue(registerPageOject.verifyPasswordError("must have at least 6 characters"));
 	}

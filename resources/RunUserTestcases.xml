@@ -5,7 +5,8 @@
 		<parameter name="browser" value="firefox_ui" />
 		<parameter name="url" value="https://demo.nopcommerce.com/" />
 		<classes>
-			<class name="com.nopcomerce.users.TC_01_Register" />
+			<class name="com.nopcomerce.users.Register" />
+			<class name="com.nopcomerce.users.Login" />
 		</classes>
 	</test>
 </suite> 
