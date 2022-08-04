@@ -15,9 +15,17 @@ public class PageGeneratorManage {
 	public static LoginPage getLoginPageOject(WebDriver driver) {
 		return new LoginPage(driver);
 	}
+	
+	public static CustomerInforPage getCustomerInforPage(WebDriver driver) {
+		return new CustomerInforPage(driver);
+	}
+	
+	public static AddressPage getAddressPageOject(WebDriver driver) {
+		return new AddressPage(driver);
+	}
 
-	public static MyAccountPage getMyAccountPageOject(WebDriver driver) {
-		return new MyAccountPage(driver);
+	public static ChangePasswordPage getChangePasswordPageOject(WebDriver driver) {
+		return new ChangePasswordPage(driver);
 	}
 	
 	

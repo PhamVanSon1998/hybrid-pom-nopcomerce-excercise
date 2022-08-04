@@ -24,4 +24,10 @@ public class HomePage extends AbtractPage {
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
 		return PageGeneratorManage.getLoginPageOject(driver);
 	}
+
+	public CustomerInforPage clickToMyAccountLink() {
+		waitToElementClickable(driver, HomePageUI.MYACCOUNT_LINK);
+		clickToElement(driver, HomePageUI.MYACCOUNT_LINK);
+		return PageGeneratorManage.getCustomerInforPage(driver);
+	}
 }

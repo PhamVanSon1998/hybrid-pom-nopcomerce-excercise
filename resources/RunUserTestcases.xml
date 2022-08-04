@@ -4,10 +4,11 @@
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui" />
 		<parameter name="url" value="https://demo.nopcommerce.com/" />
-		<parameter name="emailLogin" value="123" />
+		<parameter name="emailLogin" value="121" />
 		<classes>
 			<class name="com.nopcomerce.users.Register" />
 			<class name="com.nopcomerce.users.Login" />
+			<class name="com.nopcomerce.users.CustomerInfor" />
 		</classes>
 	</test>
 </suite> 

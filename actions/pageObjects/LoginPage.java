@@ -2,6 +2,8 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
+import com.nopcomerce.users.CustomerInfor;
+
 import commoms.AbtractPage;
 import pageUIs.HomePageUI;
 import pageUIs.LoginPageUI;
@@ -45,5 +47,4 @@ public class LoginPage extends AbtractPage {
 		waitToElementVisible(driver, HomePageUI.MYACCOUNT_LINK);
 		return isElementDisplayed(driver, HomePageUI.MYACCOUNT_LINK);
 	}
-
 }

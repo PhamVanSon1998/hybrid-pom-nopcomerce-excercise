@@ -13,7 +13,7 @@ import pageObjects.LoginPage;
 
 public class Login extends AbtractTest {
 	WebDriver driver;
-	HomePage homePageOject;
+	HomePage homePageObject;
 	LoginPage loginPageOject;
 
 	@Parameters({ "browser", "url", "emailLogin" })
@@ -24,8 +24,8 @@ public class Login extends AbtractTest {
 
 	@Test
 	public void TC_01_Login_With_Empty_Data() {
-		homePageOject = pageObjects.PageGeneratorManage.getHomePageOject(driver);
-		loginPageOject = homePageOject.clickLoginLink();
+		homePageObject = pageObjects.PageGeneratorManage.getHomePageOject(driver);
+		loginPageOject = homePageObject.clickLoginLink();
 		loginPageOject.clickToLoginButton();
 		Assert.assertTrue(loginPageOject.verifyEmailMessageError("Please enter your email"));
 	}
@@ -63,7 +63,7 @@ public class Login extends AbtractTest {
 	public void TC_06_Login_Success() {
 		loginPageOject.inputToEmailTextbox(email);
 		loginPageOject.inputToPassword(password);
-		homePageOject= loginPageOject.clickToLoginButton();
+		homePageObject= loginPageOject.clickToLoginButton();
 		Assert.assertTrue(loginPageOject.verifyMyaccountLinkDisplay());
 	}
 
