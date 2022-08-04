@@ -18,12 +18,11 @@ public class Register extends AbtractTest {
 	WebDriver driver;
 	HomePage homePageOject;
 	RegisterPage registerPageOject;
-	@Parameters({ "browser", "url" })
+	@Parameters({ "browser", "url", "emailLogin" })
 	@BeforeClass
-	public void BeforeClass(String browserName, String urlValues) {
-		driver = getBrowserDriver(browserName, urlValues);
+	public void BeforeClass(String browserName, String urlValues, String emailLogin) {
+		driver = getBrowserDriver(browserName, urlValues,emailLogin);
 	}
-
 	@Test
 	public void TC_01_Register_With_Empty_Data() {
 		homePageOject = pageObjects.PageGeneratorManage.getHomePageOject(driver);

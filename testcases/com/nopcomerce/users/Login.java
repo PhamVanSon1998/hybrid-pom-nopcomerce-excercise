@@ -16,10 +16,10 @@ public class Login extends AbtractTest {
 	HomePage homePageOject;
 	LoginPage loginPageOject;
 
-	@Parameters({ "browser", "url" })
+	@Parameters({ "browser", "url", "emailLogin" })
 	@BeforeClass
-	public void BeforeClass(String browserName, String urlValues) {
-		driver = getBrowserDriver(browserName, urlValues);
+	public void BeforeClass(String browserName, String urlValues, String emailLogin) {
+		driver = getBrowserDriver(browserName, urlValues,emailLogin);
 	}
 
 	@Test

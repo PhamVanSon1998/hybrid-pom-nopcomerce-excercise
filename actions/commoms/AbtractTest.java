@@ -17,7 +17,7 @@ public class AbtractTest {
 	private WebDriver driver;
 	private String osName = System.getProperty("os.name");
 	protected String firstName, lastName, day, month, year, email, companyName, password,passwordLow, passwordError,confirmPassword,emailNotRegister,emailError;
-	protected WebDriver getBrowserDriver(String browserName,String urlValues) {
+	protected WebDriver getBrowserDriver(String browserName,String urlValues, String emailLogin) {
 		firstName = "Phan";
 		lastName = "Thuy";
 		day = "28";
@@ -27,7 +27,7 @@ public class AbtractTest {
 		password = "28111998";
 		passwordLow = "2811";
 		confirmPassword="281198";
-		email = "Phanthuy" + "123456" + "@gmail.com";
+		email = "Phanthuy" + emailLogin + "@gmail.com";
 		password = "123456";
 		emailError = "Phanthuy.123";
 		passwordError = "123457";
