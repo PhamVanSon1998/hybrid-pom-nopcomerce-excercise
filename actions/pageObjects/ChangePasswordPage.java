@@ -42,4 +42,10 @@ public class ChangePasswordPage extends AbtractPage{
 		return mesageError.equals(getElementText(driver, ChangePasswordPageUI.CHANGE_PASSWORD_MESSAGE_ERROR));
 	}
 
+	public MyProductReviewPage clickToMyProductReviewLink() {
+		waitToElementVisible(driver, ChangePasswordPageUI.MYPRODUCT_REVIEW_LINK);
+		clickToElement(driver,ChangePasswordPageUI.MYPRODUCT_REVIEW_LINK);
+		return PageGeneratorManage.getMyProductReviewPageOject(driver);
+	}
+
 }

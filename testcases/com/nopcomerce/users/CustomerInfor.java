@@ -91,4 +91,26 @@ public class CustomerInfor extends AbtractTest {
 		Assert.assertTrue(changePasswordPageObject.verifyChangePasswordSuccess());
 	}
 	
+	@Test
+	public void TC_05_My_Product_Review() {
+		changePasswordPageObject=pageObjects.PageGeneratorManage.getChangePasswordPageOject(driver);
+		myProductReviewPageObject = changePasswordPageObject.clickToMyProductReviewLink();
+		myProductReviewPageObject.moveToComputerLink();
+		myProductReviewPageObject.clickToDestopLink();
+		myProductReviewPageObject.clickToProductReview("Build your own computer");
+		myProductReviewPageObject.clickToAddYourReviewLink();
+		myProductReviewPageObject.inputToReviewTitleTextbox("Product in techinical");
+		myProductReviewPageObject.inputToReviewTextTextArea("good quality");
+		myProductReviewPageObject.selectRatingCheckbox();
+		myProductReviewPageObject.clickToSubmitReview();
+		myProductReviewPageObject.clickToMyAcountLinkInFooter("My account");
+		myProductReviewPageObject.clickToMyProductReviewLink1();
+		
+		Assert.assertTrue(myProductReviewPageObject.isProductReviewTitleDisplayed("Product in techinical"));
+		Assert.assertTrue(myProductReviewPageObject.isProductReviewTextDisplayed("good quality"));
+		Assert.assertTrue(myProductReviewPageObject.isProductReviewDisplayed("Build your own computer"));
+		
+		
+		
+	}
 }

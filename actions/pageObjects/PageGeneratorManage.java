@@ -23,9 +23,13 @@ public class PageGeneratorManage {
 	public static AddressPage getAddressPageOject(WebDriver driver) {
 		return new AddressPage(driver);
 	}
-
+	
 	public static ChangePasswordPage getChangePasswordPageOject(WebDriver driver) {
 		return new ChangePasswordPage(driver);
+	}
+
+	public static MyProductReviewPage getMyProductReviewPageOject(WebDriver driver) {
+		return new MyProductReviewPage(driver);
 	}
 	
 	

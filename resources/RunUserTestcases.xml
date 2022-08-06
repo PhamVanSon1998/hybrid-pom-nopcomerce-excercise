@@ -4,7 +4,7 @@
 	<test name="Run on FIREFOX UI">
 		<parameter name="browser" value="firefox_ui" />
 		<parameter name="url" value="https://demo.nopcommerce.com/" />
-		<parameter name="emailLogin" value="121" />
+		<parameter name="emailLogin" value="11111" />
 		<classes>
 			<class name="com.nopcomerce.users.Register" />
 			<class name="com.nopcomerce.users.Login" />
