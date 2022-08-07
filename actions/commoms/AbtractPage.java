@@ -148,6 +148,12 @@ public class AbtractPage {
 		select = new Select(element);
 		select.selectByVisibleText(itemValue);
 	}
+	
+	public void selectItemInDropdown(WebDriver driver, String Locator, String itemValue, String... values) {
+		WebElement element = getElement(driver, getDynamicLocator(Locator, values));
+		select = new Select(element);
+		select.selectByVisibleText(itemValue);
+	}
 
 	public String getFirstSelectedTextInDropdown(WebDriver driver, String Locator) {
 		element = getElement(driver, Locator);

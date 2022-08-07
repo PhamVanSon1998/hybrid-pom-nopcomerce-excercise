@@ -2,7 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
-import com.nopcomerce.users.CustomerInfor;
+import com.nopcomerce.users.MyAccount;
 
 import commoms.AbtractPage;
 import pageUIs.HomePageUI;

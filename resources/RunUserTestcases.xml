@@ -6,9 +6,7 @@
 		<parameter name="url" value="https://demo.nopcommerce.com/" />
 		<parameter name="emailLogin" value="11111" />
 		<classes>
-			<class name="com.nopcomerce.users.Register" />
-			<class name="com.nopcomerce.users.Login" />
-			<class name="com.nopcomerce.users.CustomerInfor" />
+			<class name="com.nopcomerce.users.Search" />
 		</classes>
 	</test>
 </suite> 

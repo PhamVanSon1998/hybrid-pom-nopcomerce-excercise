@@ -30,4 +30,10 @@ public class HomePage extends AbtractPage {
 		clickToElement(driver, HomePageUI.MYACCOUNT_LINK);
 		return PageGeneratorManage.getCustomerInforPage(driver);
 	}
+
+	public SearchPage clickSearchLink(String footerText) {
+		waitToElementClickable(driver, HomePageUI.FOOTER_TEXT_LINK, footerText);
+		clickToElement(driver, HomePageUI.FOOTER_TEXT_LINK,footerText);
+		return PageGeneratorManage.getSearchPageOject(driver);
+	}
 }

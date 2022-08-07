@@ -14,7 +14,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyProductReviewPage;
 
-public class CustomerInfor extends AbtractTest {
+public class MyAccount extends AbtractTest {
 	WebDriver driver;
 	CustomerInforPage customerInforPageObject;
 	HomePage homePageObject;
